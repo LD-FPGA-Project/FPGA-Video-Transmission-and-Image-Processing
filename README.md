@@ -1,9 +1,7 @@
-### baieti am scris asta cu copilot, nu ma intrebati de nimic
-
 # FPGA-Image-Processing
 
 - FPGA Board: Xilinx Nexys 4 Artix-7
-- IDE: Vivado 2022.2
+- IDE: AMD Vivado 2022
 - Language: Verilog
 
 ## Description
