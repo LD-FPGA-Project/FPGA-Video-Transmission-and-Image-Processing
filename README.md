@@ -1,7 +1,7 @@
 # FPGA-Image-Processing
 
 - FPGA Board: Xilinx Nexys 4 Artix-7
-- IDE: AMD Vivado 2022
+- IDE: AMD Vivado 2023.2
 - Language: Verilog
 
 ## Description
