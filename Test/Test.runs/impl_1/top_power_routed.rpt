@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Tue Apr 16 19:52:30 2024
+| Date             : Tue Apr 16 22:25:39 2024
 | Host             : DESKTOP-PGGP91I running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.158        |
+| Total On-Chip Power (W)  | 0.169        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.086        |
+| Dynamic (W)              | 0.097        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 84.2         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |       97 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       36 |     32600 |            0.11 |
+| Slice Logic    |    <0.001 |      100 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       33 |     32600 |            0.10 |
 |   CARRY4       |    <0.001 |        5 |      8150 |            0.06 |
-|   Register     |    <0.001 |       41 |     65200 |            0.06 |
-|   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |    <0.001 |       70 |       --- |             --- |
+|   Register     |    <0.001 |       43 |     65200 |            0.07 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |    <0.001 |       68 |       --- |             --- |
 | MMCM           |     0.085 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       16 |       210 |            7.62 |
+| I/O            |     0.012 |       16 |       210 |            7.62 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.158 |          |           |                 |
+| Total          |     0.169 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,8 +73,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.059 |       0.047 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.060 |       0.047 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,7 +144,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| top         |     0.086 |
+| top         |     0.097 |
 |   clock_gen |     0.085 |
 |     inst    |     0.085 |
 +-------------+-----------+
