@@ -1,0 +1,55 @@
+`timescale 1ns / 1ps
+
+module sccb_master_tb;
+
+    // Inputs
+    reg clk;
+    reg reset;
+    reg start;
+    reg [15:0] data_in;
+
+    // Outputs
+    wire scl;
+    wire sda;
+
+    // Instantiate the Unit Under Test (UUT)
+    sccb_master uut (
+        .clk(clk),
+        .reset(reset),
+        .start(start),
+        .data_in(data_in),
+        .scl(scl),
+        .sda(sda)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk; // 100MHz clock
+
+    // Monitor to observe the outputs
+    initial begin
+        $monitor("Time=%t, reset=%b, start=%b, scl=%b, sda=%b", $time, reset, start, scl, sda);
+    end
+
+    // Stimulus logic
+    initial begin
+        // Initialize Inputs
+        clk = 0;
+        reset = 1;
+        start = 0;
+        data_in = 16'h1234; // Example data: Address 0x12, Data 0x34
+
+        // Wait 100 ns for global reset to finish
+        #100;
+        reset = 0;
+
+        // Add stimulus here
+        #100;
+        start = 1; // Trigger a start
+        #10;
+        start = 0;
+
+        #200; // Allow time for transaction to complete
+        $finish; // Terminate simulation
+    end
+
+endmodule
