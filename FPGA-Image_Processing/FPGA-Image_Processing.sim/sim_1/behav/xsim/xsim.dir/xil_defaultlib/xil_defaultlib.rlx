@@ -2,10 +2,11 @@
 2020.2
 Oct 13 2023
 20:47:58
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/image_capture_rgb444_tb.v,1713268003,verilog,,,,image_capture_rgb444_tb,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/ov7670_config_tb.v,1713266027,verilog,,,,ov7670_config_tb,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/sccb_master_tb.v,1713262918,verilog,,,,sccb_master_tb,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/image_capture_rgb444.v,1713267849,verilog,,C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/image_capture_rgb444_tb.v,,image_capture_rgb444,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/ov7670_config.v,1713265865,verilog,,C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/ov7670_config_tb.v,,ov7670_config,,,,,,,,
-C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/sccb_master.v,1713263342,verilog,,C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/sccb_master_tb.v,,sccb_master,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/image_capture_rgb444_tb.v,1713268003,verilog,,,,image_capture_rgb444_tb,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/vga_driver_tb.v,1713277408,verilog,,,,vga_driver_tb,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/vga_top_tb.v,1713273602,verilog,,,,vga_top_tb,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/clock_divider.v,1713273065,verilog,,C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/horizontal_counter.v,,clock_divider,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/image_capture_rgb444.v,1713267849,verilog,,C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/image_capture_rgb444_tb.v,,image_capture_rgb444,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/vga_driver.v,1713276728,verilog,,C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/vga_driver_tb.v,,vga_driver,,,,,,,,
+C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sources_1/new/vga_top.v,1713274201,verilog,,C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/vga_top_tb.v,,vga_top,,,,,,,,

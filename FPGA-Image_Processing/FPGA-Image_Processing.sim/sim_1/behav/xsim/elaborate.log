@@ -1,7 +1,7 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot image_capture_rgb444_tb_behav xil_defaultlib.image_capture_rgb444_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot vga_driver_tb_behav xil_defaultlib.vga_driver_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -9,7 +9,7 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.image_capture_rgb444
-Compiling module xil_defaultlib.image_capture_rgb444_tb
+Compiling module xil_defaultlib.vga_driver_default
+Compiling module xil_defaultlib.vga_driver_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot image_capture_rgb444_tb_behav
+Built simulation snapshot vga_driver_tb_behav

@@ -1,7 +1,0 @@
-Time resolution is 1 ps
-Time=                   0: Pixel Data=0000, Pixel Valid=0, Frame Done=0
-Time=              250000: Pixel Data=aa55, Pixel Valid=1, Frame Done=0
-Time=              270000: Pixel Data=aa55, Pixel Valid=0, Frame Done=0
-Time=              310000: Pixel Data=aa55, Pixel Valid=0, Frame Done=1
-Time=              330000: Pixel Data=aa55, Pixel Valid=0, Frame Done=0
-$finish called at time : 800 ns : File "C:/Users/catal/FPGA-Image-Processing/FPGA-Image_Processing/FPGA-Image_Processing.srcs/sim_1/new/image_capture_rgb444_tb.v" Line 85
