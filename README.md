@@ -6,7 +6,7 @@
 
 ## Description
 
-This project is a simple image processing system that can perform the following operations on a 24-bit RGB image:
+This project is a simple image processing system that can perform the following operations on a 12-bit RGB image:
 
 - Convert to grayscale
 - Invert colors
