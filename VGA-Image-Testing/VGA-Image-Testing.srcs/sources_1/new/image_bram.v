@@ -3,7 +3,8 @@
 
 module image_bram(
     input wire [16:0] addr, 
-    input wire clk,          
+    input wire clk,
+    input wire switch,          
     output reg [11:0] data_out  
 );
 
@@ -21,7 +22,10 @@ module image_bram(
 
  
     always @(posedge clk) begin
+        if(switch)
         data_out <= bram[addr];
+        else
+        data_out <= bram[76799-addr];
     end
 
 endmodule
