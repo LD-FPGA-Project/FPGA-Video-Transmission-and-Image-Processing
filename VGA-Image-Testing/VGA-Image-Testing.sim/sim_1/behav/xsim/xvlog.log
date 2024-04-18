@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sim_1/new/tb_blk_mem_gen_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_blk_mem_gen_0
