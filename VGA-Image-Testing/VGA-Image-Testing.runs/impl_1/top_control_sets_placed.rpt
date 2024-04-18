@@ -1,0 +1,84 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Apr 18 21:39:13 2024
+| Host         : DESKTOP-PGGP91I running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a50t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     6 |
+|    Minimum number of control sets                        |     6 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    37 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     6 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              19 |           12 |
+| No           | No                    | Yes                    |              12 |            4 |
+| No           | Yes                   | No                     |              18 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+--------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |          Enable Signal         |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+--------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  i_top_clk_IBUF          |                                |                                         |                1 |              1 |         1.00 |
+|  clock_gen/inst/clk_out1 |                                | top_btn_db/r_sample_reg_0               |                1 |              2 |         2.00 |
+|  clock_gen/inst/clk_out1 |                                | display_interface/vga_gen/hc[9]_i_2_n_0 |                3 |             10 |         3.33 |
+|  clock_gen/inst/clk_out1 | display_interface/vga_gen/vc_1 | display_interface/vga_gen/hc[9]_i_2_n_0 |                4 |             10 |         2.50 |
+|  i_top_clk_IBUF          |                                | top_btn_db/p_0_in                       |                5 |             18 |         3.60 |
+|  clock_gen/inst/clk_out1 |                                |                                         |               11 |             18 |         1.64 |
++--------------------------+--------------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+
