@@ -5,8 +5,8 @@ int main()
     //lasa doar de la 0 la F litere + cifre
     FILE *fin = NULL;
     FILE *fout = NULL;
-    char *filename1 = "image_data.coe";
-    char *filename2 = "output.coe";
+    char *filename1 = "intermediate_image_data.coe";
+    char *filename2 = "image_data.coe";
 
    if((fin = fopen(filename1, "r")) == NULL)
     {
