@@ -26,10 +26,14 @@ int main()
     fgets(header_string, 100, fin);
 
     char c;
+    int i = 0;
     while((c = fgetc(fin)) != EOF)
     {
-        if(strchr("0123456789ABCDEF", c) != NULL)
+        if(strchr("0123456789ABCDEF ", c) != NULL)
         {
+            if(i % 3 == 0)
+                fprintf(fout, " ");
+            i++;
             fprintf(fout, "%c", c);
         }
     }
