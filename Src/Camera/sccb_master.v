@@ -34,38 +34,38 @@ always @(posedge clk or posedge rst) begin
         case (state)
             STATE_IDLE: begin
                 if (start) begin
-                    shift_reg <= {addr, 1'b0};  // Address + write bit
+                    shift_reg <= {addr, 1'b0};  
                     state <= STATE_START;
                 end
-                scl <= 1'b1;  // Ensure SCL is high in IDLE
+                scl <= 1'b1;  
             end
             STATE_START: begin
-                sda_drive <= 1'b1;  // Drive SDA low to issue start condition
-                scl <= 1'b0;        // Pull SCL low to begin data transmission
+                sda_drive <= 1'b1;  
+                scl <= 1'b0;       
                 state <= STATE_SHIFT;
             end
             STATE_SHIFT: begin
                 if (bit_counter < 8) begin
-                    sda_drive <= shift_reg[7];  // Send MSB first
-                    shift_reg <= shift_reg << 1; // Shift left for next bit
+                    sda_drive <= shift_reg[7];  
+                    shift_reg <= shift_reg << 1; 
                     bit_counter <= bit_counter + 1;
                 end else begin
                     bit_counter <= 0;
-                    sda_drive <= 1'b0;  // Release SDA for ACK
+                    sda_drive <= 1'b0;  
                     state <= STATE_ACK;
                 end
-                scl <= ~scl;  // Toggle SCL to clock bits
+                scl <= ~scl;  
             end
             STATE_ACK: begin
-                if (!scl) begin  // Check for ACK on the falling edge of SCL
-                    shift_reg <= data;  // Load data for next transmission
+                if (!scl) begin  
+                    shift_reg <= data; 
                     state <= STATE_SHIFT;
                 end
             end
             STATE_STOP: begin
-                sda_drive <= 1'b0;  // Ensure SDA is low
-                scl <= 1'b1;        // Bring SCL high
-                sda_drive <= 1'b1;  // Release SDA to float high for stop condition
+                sda_drive <= 1'b0;  
+                scl <= 1'b1;       
+                sda_drive <= 1'b1;  
                 state <= STATE_IDLE;
             end
             default: state <= STATE_IDLE;
