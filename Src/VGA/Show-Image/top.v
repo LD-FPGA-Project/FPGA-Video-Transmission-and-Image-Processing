@@ -33,6 +33,12 @@ module top
     wire [9:0] x, y;  
     wire [11:0] pixel_data;
 
+   
+    blk_mem_gen_0 bram_access (
+        .clka(w_clk25m),
+        .addra(y * 320 + x),
+        .douta(pixel_data)
+    );
 
    
     vga_top display_interface (
