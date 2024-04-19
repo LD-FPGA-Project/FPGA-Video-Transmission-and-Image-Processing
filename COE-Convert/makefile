@@ -3,8 +3,10 @@
 # RUN THIS MAKEFILE
 # THE OUTPUT WILL BE IN THE FILE image_data.coe
 # MOVE THE FILE TO /FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new
-
-all:
+rename:
+	mv /Users/paulhondola/GitHub/FPGA-Image-Processing/COE-Convert/*.jpeg /Users/paulhondola/GitHub/FPGA-Image-Processing/COE-Convert/photo.jpg
+convert:
 	clang -Wall -o convert.exe coe_convert.c
 	./convert.exe
+move:
 	cp image_data.coe /Users/paulhondola/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new
