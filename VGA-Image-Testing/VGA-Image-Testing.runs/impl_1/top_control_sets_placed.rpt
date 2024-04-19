@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu Apr 18 21:39:13 2024
+| Date         : Thu Apr 18 22:49:46 2024
 | Host         : DESKTOP-PGGP91I running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     6 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    37 |
+| Unused register locations in slices containing registers |    33 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              19 |           12 |
+| No           | No                    | No                     |              31 |           13 |
 | No           | No                    | Yes                    |              12 |            4 |
 | No           | Yes                   | No                     |              18 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | No                    | Yes                    |              10 |            5 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -76,9 +76,9 @@ Table of Contents
 |  i_top_clk_IBUF          |                                |                                         |                1 |              1 |         1.00 |
 |  clock_gen/inst/clk_out1 |                                | top_btn_db/r_sample_reg_0               |                1 |              2 |         2.00 |
 |  clock_gen/inst/clk_out1 |                                | display_interface/vga_gen/hc[9]_i_2_n_0 |                3 |             10 |         3.33 |
-|  clock_gen/inst/clk_out1 | display_interface/vga_gen/vc_1 | display_interface/vga_gen/hc[9]_i_2_n_0 |                4 |             10 |         2.50 |
+|  clock_gen/inst/clk_out1 | display_interface/vga_gen/vc_1 | display_interface/vga_gen/hc[9]_i_2_n_0 |                5 |             10 |         2.00 |
 |  i_top_clk_IBUF          |                                | top_btn_db/p_0_in                       |                5 |             18 |         3.60 |
-|  clock_gen/inst/clk_out1 |                                |                                         |               11 |             18 |         1.64 |
+|  clock_gen/inst/clk_out1 |                                |                                         |               12 |             30 |         2.50 |
 +--------------------------+--------------------------------+-----------------------------------------+------------------+----------------+--------------+
 
 

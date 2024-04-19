@@ -7,6 +7,7 @@ module top
     input wire i_top_rst,
     input wire switch_reverse,
     input wire start_grayscale, 
+    input wire start_inverse, 
     
     output wire [3:0] o_top_vga_red,
     output wire [3:0] o_top_vga_green,
@@ -38,15 +39,26 @@ module top
     wire [9:0] x, y;  
     wire [11:0] pixel_data;
     wire [11:0] pixel_data_grayscale;
+    wire [11:0] pixel_data_invert;
 
     image_bram image_pixels(.clk(w_clk25m), .addr((y*320)+x), .data_out(pixel_data), .switch(switch_reverse));
     gray_scale make_gray(.clk(w_clk25m), .pixel_data(pixel_data), .data_out(pixel_data_grayscale));
-
+    invert_colors inverse(.clk(w_clk25m), .pixel_data(pixel_data), .data_out(pixel_data_invert));
     reg [11:0] pixel;
     
-    always @(posedge w_clk25m) begin
-        pixel <= start_grayscale ? pixel_data : pixel_data_grayscale;
+always @(posedge w_clk25m) begin
+    pixel <= pixel_data;
+    
+    
+    if (start_grayscale) begin
+        pixel <= pixel_data_grayscale; 
     end
+    
+
+    if (start_inverse) begin
+        pixel <=  pixel_data_invert;
+    end
+end
     
     vga_top display_interface (
         .i_clk25m(w_clk25m),

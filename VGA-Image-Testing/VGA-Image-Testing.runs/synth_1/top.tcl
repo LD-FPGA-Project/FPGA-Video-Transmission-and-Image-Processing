@@ -71,7 +71,9 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/catal/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11840-DESKTOP-PGGP91I/incrSyn
+set_param chipscope.maxJobs 4
+set_param synth.incrementalSynthesisCache C:/Users/catal/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13852-DESKTOP-PGGP91I/incrSyn
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -95,6 +97,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/debouncer.v
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/gray_scale.v
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/image_bram.v
+  C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/invert_colors.v
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/vga_driver.v
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/vga_top.v
   C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new/top.v
