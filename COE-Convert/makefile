@@ -3,8 +3,16 @@
 # RUN THIS MAKEFILE
 # THE OUTPUT WILL BE IN THE FILE image_data.coe
 # MOVE THE FILE TO /FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new
+SRC_PATH = /Users/paulhondola/GitHub/FPGA-Image-Processing/COE-Convert
+DEST_PATH = /Users/paulhondola/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new
+INPUT = photo.jpg
+OUTPUT = image_data.coe
+
+IMAGE_JPG = $(wildcard *.jpg)
+IMAGE_JPEG = $(wildcard *.jpeg)
 
 rename:
-	mv /Users/paulhondola/GitHub/FPGA-Image-Processing/COE-Convert/*.jpeg /Users/paulhondola/GitHub/FPGA-Image-Processing/COE-Convert/photo.jpg
+	# mv $(IMAGE_JPEG) $(SRC_PATH)/$(INPUT)
+	mv $(IMAGE_JPG) $(SRC_PATH)/$(INPUT)
 move:
-	cp image_data.coe /Users/paulhondola/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new
+	mv $(OUTPUT) $(DEST_PATH)
