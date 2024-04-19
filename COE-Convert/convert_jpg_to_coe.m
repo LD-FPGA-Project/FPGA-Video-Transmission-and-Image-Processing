@@ -3,7 +3,7 @@ img = imresize(img, [240, 320]); % Resize image if necessary
 
 img = uint8(double(img) * 15 / 255); % Scale from 0-255 to 0-15
 
-fileID = fopen('intermediate_image_data.coe', 'w');
+fileID = fopen('image_data.coe', 'w');
 % fprintf(fileID, 'memory_initialization_radix=16;\nmemory_initialization_vector=\n');
 
 i = 0;
