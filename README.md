@@ -3,7 +3,7 @@
 - FPGA Board: Xilinx Nexys 4 Artix-7
 - Camera: OV7670
 - IDE: AMD Vivado 2023.2
-- Language: Verilog
+- Language: Verilog / VHDL
 
 ## Description
 
@@ -20,8 +20,6 @@ The image processing system is implemented on an FPGA board. The image is stored
 
 ## HOW TO RUN
 
-- Rename the photo to "image.jpg"
+- Make sure the photo is in a .jpg format
 - Move to the COE-Convert Directory
-- Convert the image with the Matlab script into .coe
-- Run the C code inside with the "make" command in terminal
-- Move the resulting file "image_data.coe" to the /FPGA-Image-Processing/Src/VGA/Show-Image directory
+- Convert the image with the python script into .coe that also moves the image to the necessary directory
