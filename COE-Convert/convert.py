@@ -4,7 +4,7 @@ import shutil
 
 # Constants
 ORIGINAL_FILENAME = 'cat.jpg'
-DESTINATION_DIRECTORY = '/Users/paulhondola/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new'
+DESTINATION_DIRECTORY = '/Users/paulhondola/Developer/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.srcs/sources_1/new'
 
 # Rename the image to photo.jpg
 def rename_to_photo_jpg(filename):
