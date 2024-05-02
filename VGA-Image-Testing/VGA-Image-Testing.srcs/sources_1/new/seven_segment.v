@@ -1,6 +1,6 @@
 //7 segment display module for verifying camera input/output
 
-module seven_segment_display (
+module seven_segment (
     output reg AA,
     output reg AB,
     output reg AC,
