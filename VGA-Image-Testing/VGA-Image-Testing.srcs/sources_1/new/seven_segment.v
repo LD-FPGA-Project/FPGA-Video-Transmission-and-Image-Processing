@@ -1,16 +1,12 @@
 //7 segment display module for verifying camera input/output
 
 module seven_segment (
-    output AA,
-    output AB,
-    output AC,
-    output AD
+    output [6:0] seg,
+    output digit_sel
 );
 
-assign AA = 1;
-assign AB = 0;
-assign AC = 0;
-assign AD = 1;
+assign digit_sel = 0;
+assign seg = 7'b1111001;
 
 endmodule
 
