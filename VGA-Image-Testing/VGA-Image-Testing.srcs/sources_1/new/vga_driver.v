@@ -58,6 +58,7 @@ module vga_driver
     assign o_x_counter = (hc >= xOffset && hc < xOffset + 320) ? (hc - xOffset) : 0;
     assign o_y_counter = (vc >= yOffset && vc < yOffset + 240) ? (vc - yOffset) : 0;
 
+
      assign o_video     = ((hc >= xOffset) && (hc < xOffset +320) && (vc >= yOffset) && (vc < yOffset + 240)); 
      assign o_hsync     = ~((hc >= hSyncStart) && (hc < hSyncEnd));
      assign o_vsync     = ~((vc >= vSyncStart) && (vc < vSyncEnd)); 

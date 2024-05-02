@@ -1,31 +1,41 @@
 `timescale 1ns / 1ps
 `default_nettype none
 
-module image_bram(
-    input wire [16:0] addr, 
-    input wire clk,
-    input wire switch,          
-    output reg [11:0] data_out  
-);
+/*
+ *  Infers a dual-port BRAM with variable width and depth 
+ *  
+ *  NOTE: 
+ *  - One clock delay with read/write
+ *
+ */
 
-    reg [11:0] bram[0:76799];  
+module mem_bram
+#(parameter WIDTH = 11,
+    parameter DEPTH = 320*240)
+    (   input wire                      i_wclk,
+        input wire                      i_wr,
+        input wire [$clog2(DEPTH)-1:0]  i_wr_addr,
+        
+        input wire                      i_rclk,
+        input wire                      i_rd,
+        input wire [$clog2(DEPTH)-1:0]  i_rd_addr,
+        
+        input wire                      i_bram_en,
+        input wire [WIDTH-1:0]          i_bram_data,
+        output reg [WIDTH-1:0]          o_bram_data      
+    );
     
-
-   initial begin
-    $readmemh("image_data.coe", bram);
-    if (bram[0] === 12'hxxx)
-        $display("Error: Memory initialization failed.");
-    else
-        $display("Memory initialization successful. First value: %h", bram[0]);
-    end
-
-
- 
-    always @(posedge clk) begin
-        if(switch)
-        data_out <= bram[addr];
-        else
-        data_out <= bram[76799-addr];
-    end
+    // Infer dual-port BRAM with dual clocks
+    // https://docs.xilinx.com/v/u/2019.2-English/ug901-vivado-synthesis (page 126)
+    reg [WIDTH-1:0] ram [0:DEPTH-1]; 
+    
+    always @(posedge i_wclk)
+    if(i_bram_en)
+        if(i_wr)
+            ram[i_wr_addr] <= i_bram_data;
+    
+    always @(posedge i_rclk)
+    if(i_rd)
+        o_bram_data <= ram[i_rd_addr]; 
 
 endmodule
