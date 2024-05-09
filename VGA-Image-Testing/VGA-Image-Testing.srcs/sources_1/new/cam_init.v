@@ -1,17 +1,6 @@
 `timescale 1ns / 1ps
 `default_nettype none
 
-/*
- *  Instantiates cam_rom, cam_config, sccb_master; 
- *  cam_config waits for i_cam_init_start and ready signal 
- *  from sccb_master in order to send data to sccb_master 
- *  
- *
- *  NOTE:
- *  - cam_config reads from a synchronous ROM
- *  - w_cam_rom_data = { OV7670 REG ADDR , OV7670 REG DATA }
- *  - some (unnecessary) signals used in testbench 
- */
 
 module cam_init
 #(parameter CLK_F = 100_000_000,

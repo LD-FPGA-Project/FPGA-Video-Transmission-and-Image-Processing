@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Apr 18 22:47:45 2024
-# Process ID: 20140
+# Start of session at: Thu May  9 15:35:01 2024
+# Process ID: 21024
 # Current directory: C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/catal/Documents/GitHub/FPGA-Image-Processing/VGA-Image-Testing/VGA-Image-Testing.runs/synth_1/top.vds
