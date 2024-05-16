@@ -27,4 +27,4 @@ def capture_webcam_screenshot(file_name='webcam_screenshot.jpg'):
     print(f"Screenshot saved as {file_name}")
 
 # Call the function to capture and save a screenshot
-capture_webcam_screenshot()
+# capture_webcam_screenshot()
