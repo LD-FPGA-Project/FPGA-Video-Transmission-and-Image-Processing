@@ -8,11 +8,16 @@ DESTINATION_DIRECTORY = '/Users/paulhondola/Developer/FPGA-Image-Processing/VGA-
 def convert_to_coe():
 
 # Load image
+    print(f"Screenshot to be edited: {ORIGINAL_FILENAME}")
+
     img = Image.open(ORIGINAL_FILENAME)
 # Resize image
+    print("Resizing image to 320x240 pixels")
     img = img.resize((320, 240))
 
 # Scale from 0-255 to 0-15
+#
+    print("Scaling pixel values from 0-255 to 0-15")
     img = img.convert('RGB')
     img = img.point(lambda p: p * 15 / 255)
 
@@ -20,6 +25,7 @@ def convert_to_coe():
     file_id = open('image_data.coe', 'w')
 
 # Iterate over each pixel and write to COE file
+    print("Writing pixel values to image_data.coe")
     for row in range(img.height):
         for col in range(img.width):
             r, g, b = img.getpixel((col, row))
