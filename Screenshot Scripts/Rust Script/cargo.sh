@@ -1,2 +1,0 @@
-cargo new screenshot_example
-cd screenshot_example
