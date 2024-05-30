@@ -1,0 +1,102 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu May 23 22:29:21 2024
+| Host         : DESKTOP-PGGP91I running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a50t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    97 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    24 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              47 |           23 |
+| No           | No                    | Yes                    |              37 |           18 |
+| No           | Yes                   | No                     |              43 |           12 |
+| Yes          | No                    | No                     |              39 |           17 |
+| Yes          | No                    | Yes                    |              34 |           13 |
+| Yes          | Yes                   | No                     |             319 |          118 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+--------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                            Enable Signal                           |                        Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+--------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/cam_btn_start_db/r_sample1_out                          |                                                                |                1 |              1 |         1.00 |
+|  i_top_clk_IBUF_BUFG     |                                                                    | top_btn_db/r_sample_reg_0                                      |                1 |              2 |         2.00 |
+|  clock_gen/inst/clk_out1 |                                                                    | top_btn_db/r_sample_reg_0                                      |                1 |              2 |         2.00 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/SCCB_HERE/r_data_bit_index[8]_i_2_n_0     |                                                                |                1 |              3 |         3.00 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/SCCB_HERE/r_data_bit_index[8]_i_2_n_0     | OV7670_cam/configure_cam/SCCB_HERE/r_data_bit_index[8]_i_1_n_0 |                2 |              3 |         1.50 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/SCCB_HERE/FSM_sequential_state[3]_i_1_n_0 |                                                                |                1 |              4 |         4.00 |
+|  i_top_pclk_IBUF_BUFG    | OV7670_cam/cam_pixels/r_half_data                                  |                                                                |                4 |              4 |         1.00 |
+|  i_top_pclk_IBUF_BUFG    |                                                                    |                                                                |                4 |              6 |         1.50 |
+|  i_top_clk_IBUF_BUFG     |                                                                    | OV7670_cam/configure_cam/SCCB_HERE/timer[7]_i_1_n_0            |                2 |              7 |         3.50 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/OV7670_config/timer                       | OV7670_cam/configure_cam/OV7670_config/timer[19]_i_1_n_0       |                2 |              7 |         3.50 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/OV7670_config/o_rom_addr[0]_i_1_n_0       | OV7670_cam/configure_cam/OV7670_config/r2_rstn_top_clk_reg     |                3 |              8 |         2.67 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/SCCB_HERE/r_tx[8]_i_1_n_0                 |                                                                |                4 |              9 |         2.25 |
+|  clock_gen/inst/clk_out1 | display_interface/vga_timing_signals/vc                            | display_interface/vga_timing_signals/hc[9]_i_2_n_0             |                4 |             10 |         2.50 |
+|  i_top_clk_IBUF_BUFG     |                                                                    |                                                                |                6 |             11 |         1.83 |
+|  clock_gen/inst/clk_out1 |                                                                    | display_interface/vga_timing_signals/hc[9]_i_2_n_0             |                3 |             11 |         3.67 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/OV7670_config/timer                       | OV7670_cam/configure_cam/OV7670_config/timer[15]_i_1_n_0       |                4 |             12 |         3.00 |
+|  i_top_pclk_IBUF_BUFG    | OV7670_cam/cam_pixels/o_pix_data[11]_i_2_n_0                       | OV7670_cam/cam_pixels/o_pix_data[11]_i_1_n_0                   |               10 |             12 |         1.20 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/OV7670_config/o_i2c_addr[7]_i_1_n_0       | OV7670_cam/configure_cam/OV7670_config/r2_rstn_top_clk_reg     |                6 |             16 |         2.67 |
+|  i_top_clk_IBUF_BUFG     |                                                                    | top_btn_db/p_0_in                                              |                5 |             18 |         3.60 |
+|  i_top_clk_IBUF_BUFG     |                                                                    | OV7670_cam/cam_btn_start_db/p_0_in                             |                5 |             18 |         3.60 |
+|  i_top_clk_IBUF_BUFG     | OV7670_cam/configure_cam/SCCB_HERE/FSM_sequential_state_reg[1]_0   |                                                                |                6 |             18 |         3.00 |
+|  i_top_clk_IBUF_BUFG     |                                                                    | OV7670_cam/configure_cam/OV7670_config/r2_rstn_top_clk_reg     |               13 |             22 |         1.69 |
+|  clock_gen/inst/clk_out1 |                                                                    |                                                                |               13 |             30 |         2.31 |
+|  i_top_pclk_IBUF_BUFG    | OV7670_cam/cam_pixels/o_pix_addr_n_0                               | OV7670_cam/cam_pixels/o_pix_data[11]_i_1_n_0                   |              100 |            285 |         2.85 |
++--------------------------+--------------------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+--------------+
+
+

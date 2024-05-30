@@ -1,0 +1,96 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu May 23 22:47:32 2024
+| Host         : DESKTOP-PGGP91I running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file controller_control_sets_placed.rpt
+| Design       : controller
+| Device       : xc7a50t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    18 |
+|    Minimum number of control sets                        |    18 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    18 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              51 |           26 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              14 |            6 |
+| Yes          | No                    | No                     |              50 |           19 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              82 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |                                                                                         Enable Signal                                                                                         |                                                         Set/Reset Signal                                                        | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF                     |                                                                                                                                                                                               |                                                                                                                                 |                1 |              4 |         4.00 |
+|  clk_uart_BUFG                |                                                                                                                                                                                               | input_uart_data_1843200/data_valid0                                                                                             |                2 |              4 |         2.00 |
+|  clk_uart_BUFG                | input_uart_data_1843200/bit_location                                                                                                                                                          | input_uart_data_1843200/data_valid0                                                                                             |                1 |              4 |         4.00 |
+|  clk_uart_BUFG                | input_uart_data_1843200/insert_location                                                                                                                                                       |                                                                                                                                 |                2 |              4 |         2.00 |
+|  clk_uart_BUFG                | input_uart_data_1843200/data[6]_i_1_n_0                                                                                                                                                       | input_uart_data_1843200/data_valid0                                                                                             |                2 |              6 |         3.00 |
+|  clk_uart_BUFG                | input_uart_data_1843200/bram_write_addr                                                                                                                                                       |                                                                                                                                 |                3 |              6 |         2.00 |
+|  clock_synthesis/inst/clk_vga | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_50 | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[8]_INST_0_i_14_psbram_and_n   |                5 |              9 |         1.80 |
+|  clock_synthesis/inst/clk_vga | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_57 | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[8]_INST_0_i_10_psbram_and_n   |                9 |              9 |         1.00 |
+|  clock_synthesis/inst/clk_vga | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_69 | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[8]_INST_0_i_16_psbram_and_n   |                5 |              9 |         1.80 |
+|  clock_synthesis/inst/clk_vga | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_72 | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[8]_INST_0_i_17_psbram_and_n_1 |                7 |              9 |         1.29 |
+|  clock_synthesis/inst/clk_vga | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_REGCEB_cooolgate_en_sig_73 | data_buffer/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/doutb[8]_INST_0_i_17_psbram_and_n   |                6 |              9 |         1.50 |
+|  clock_synthesis/inst/clk_vga |                                                                                                                                                                                               | vga_module/vga_gen/vc_0                                                                                                         |                4 |             10 |         2.50 |
+|  clock_synthesis/inst/clk_vga | vga_module/vga_gen/vc_0                                                                                                                                                                       | vga_module/vga_gen/vc[10]_i_1_n_0                                                                                               |                4 |             10 |         2.50 |
+|  clk_uart_BUFG                | input_uart_data_1843200/E[0]                                                                                                                                                                  |                                                                                                                                 |                3 |             11 |         3.67 |
+|  clk_uart_BUFG                |                                                                                                                                                                                               |                                                                                                                                 |                6 |             14 |         2.33 |
+|  clk_uart_BUFG                | input_uart_data_1843200/bram_write_addr                                                                                                                                                       | input_uart_data_1843200/state_reg                                                                                               |                5 |             17 |         3.40 |
+|  clock_synthesis/inst/clk_vga | vga_module/vga_gen/E[0]                                                                                                                                                                       |                                                                                                                                 |               11 |             29 |         2.64 |
+|  clock_synthesis/inst/clk_vga |                                                                                                                                                                                               |                                                                                                                                 |               19 |             33 |         1.74 |
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
