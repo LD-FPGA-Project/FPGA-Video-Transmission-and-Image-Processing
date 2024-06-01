@@ -1,4 +1,4 @@
-# FPGA-Image-Processing-and-Video-Transmission
+# FPGA-Video-Transmission-and-Image-Processing
 
 - FPGA Board: Xilinx Nexys 4 Artix-7
 - Camera: OV7670
